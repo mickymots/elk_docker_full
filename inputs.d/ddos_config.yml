@@ -1,0 +1,15 @@
+# - type: log
+#   scan_frequency: 10s
+#   paths:
+#     - /var/log/*.log
+#     - /home/filebeat/data/03-11/LDAP.csv
+    
+
+
+- type: log
+  paths:
+    - /home/filebeat/data/test.csv
+    - /home/filebeat/data/03-11/LDAP.csv
+  scan_frequency: 5s
+
+

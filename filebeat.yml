@@ -1,0 +1,30 @@
+filebeat.config.inputs:
+  enabled: true
+  path: inputs.d/*.yml
+  reload.enabled: true
+  reload.period: 5s
+
+
+# filebeat.modules:
+# - module: mssql
+#   log:
+#     enabled: true
+#     var.paths: ['/home/filebeat/data/03-11/MSSQL.csv*']
+
+      
+
+setup.kibana.host: "http://kib01:5601"
+
+# output.elasticsearch.hosts: ["http://es01:9200"]
+
+output.logstash:
+  hosts: ["logstash:5044"]
+
+
+logging.level: debug
+logging.to_files: true
+logging.files:
+  path: /var/log/filebeat
+  name: filebeat
+  keepfiles: 7
+  permissions: 0666
