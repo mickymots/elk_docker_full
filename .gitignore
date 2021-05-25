@@ -1,3 +1,4 @@
 *.zip
 *.csv*
 fb_data/**
+**/queue/**
