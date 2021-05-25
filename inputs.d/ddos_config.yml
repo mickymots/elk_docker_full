@@ -8,7 +8,7 @@
 
 - type: log
   paths:
-    - /home/filebeat/data/test.csv
+    # - /home/filebeat/data/test.csv
     - /home/filebeat/data/03-11/LDAP.csv
   scan_frequency: 5s
 
